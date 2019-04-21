@@ -24,4 +24,15 @@ int main(){
     return 0;
 }
 ```
-
+### 快速幂
+```cpp
+inline ll ksm(ll a,ll p,ll m){
+    ll Ans=1;
+    while (p){
+        if (p&1) Ans=Ans*a%m;
+        a*=a;a%=m;
+        p>>=1;
+    }
+    return Ans%m;
+}
+```
